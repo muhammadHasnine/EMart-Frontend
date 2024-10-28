@@ -1,5 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom';
 
 const user = {
 
@@ -60,8 +61,10 @@ const Navbar = ({children}) => {
                     type="button"
                     className="relative z-10 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
+                    <Link to={'/cart'}>
                     <span className="absolute -inset-1.5" />
                     <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+                    </Link>
                   </button>
                   <span className="relative z-20 inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 mb-7 -ml-3 ring-inset ring-green-600/20">3</span>
                   {/* Profile dropdown */}
@@ -133,8 +136,10 @@ const Navbar = ({children}) => {
                   type="button"
                   className="relative z-10 ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
+                  <Link to={'/cart'}>
                   <span className="absolute -inset-1.5" />                  
                   <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+                  </Link>
                 </button>
                 <span className="relative z-20 inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 mb-7 -ml-3 ring-inset ring-green-600/20">3</span>
               </div>
